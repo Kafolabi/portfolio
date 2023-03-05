@@ -12,7 +12,7 @@ const Portfolio = () => {
           <div className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4">
             <PortfolioHeader
               github="https://github.com/Kafolabi/simple-calculator"
-              link="https://angry-colden-720662.netlify.app"
+              link="https://simple-calculator293.netlify.app"
             />
             <PortfolioBody
               heading="Simple Calculator App"
@@ -27,7 +27,7 @@ const Portfolio = () => {
           <div className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4">
             <PortfolioHeader
               github="https://github.com/Kafolabi/blogr"
-              link="https://keen-crumble-77c4ba.netlify.app/"
+              link="https://blogr-fictional.netlify.app"
             />
             <PortfolioBody
               heading="Landing Page for Fictional Writing Company"
@@ -57,8 +57,8 @@ const Portfolio = () => {
         <div className="col-sm container">
           <div className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4">
             <PortfolioHeader
-              github="https://github.com/Kafolabi/portfolio-page"
-              link="https://angry-colden-720662.netlify.app"
+              github="https://github.com/Kafolabi/portfolio"
+              link="#"
             />
             <PortfolioBody
               heading="Portfolio Page"
