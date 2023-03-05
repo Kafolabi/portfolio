@@ -1,17 +1,38 @@
-import whatsapp from './whatsapp.svg'
-import linkedin from './linkedin.svg'
-import google from './google.svg'
-import github from './github.svg'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Social = () => {
-    return (
-        <div>
-    <a href='#'><img src={github} width={25} height={25} className="m-4 text-color-light d-block"></img></a>
-    <a href='#'><img src={linkedin} width={25} height={25} className="m-4 text-color-light d-block"></img></a>
-    <a href='#'><img src={whatsapp} width={25} height={25} className="m-4 text-color-light d-block"></img></a>
-    <a href='#'><img src={google} width={25} height={25} className="m-4 text-color-light d-block"></img></a>
+  return (
+    <div>
+      <a href="https://github.com/Kafolabi">
+        <FontAwesomeIcon
+          icon={["fab", "github"]}
+          size="2x"
+          className="m-4 text-color-light d-block"
+        />
+      </a>
+      <a href="https://github.com/Kafolabi">
+        <FontAwesomeIcon
+          icon={["fab", "linkedin"]}
+          size="2x"
+          className="m-4 text-color-light d-block"
+        />
+      </a>
+      <a href="https://wa.me/08168691211">
+        <FontAwesomeIcon
+          icon={["fab", "whatsapp"]}
+          size="2x"
+          className="m-4 text-color-light d-block"
+        />
+      </a>
+      <a href="https://github.com/Kafolabi">
+        <FontAwesomeIcon
+          icon={["fab", "telegram"]}
+          size="2x"
+          className="m-4 text-color-light d-block"
+        />
+      </a>
     </div>
-    );
-}
+  );
+};
 
 export default Social;

@@ -24,6 +24,6 @@ html {
 
 * {
   box-sizing: border-box;
-  opacity: 0.987 !important;
+  /* opacity: 0.987; */
   letter-spacing: 0.0425rem;
 }

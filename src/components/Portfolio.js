@@ -1,8 +1,7 @@
 import { heading } from "../functionality.js";
-import pic1 from "./pic1.png";
-import pic2 from "./pic2.png";
-import pic3 from "./pic3.png";
-import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
+import PortfolioFooter from "./PortfolioFooter.js";
+import PortfolioHeader from "./PortfolioHeader.js";
+import PortfolioBody from "./PortfolioBody.js";
 
 const Portfolio = () => {
   return (
@@ -10,33 +9,63 @@ const Portfolio = () => {
       <h1> {heading("03. ", " <portfolio>")} </h1>
       <div className="row mt-5">
         <div className="col-sm container">
-          <div className="card rounded-4 bg-transparent border-0 shadow-lg mt-4 pt-4 mb-4">
-            <div className="card-header border-0 bg-transparent">
-              <FontAwesomeIcon
-                icon={["fab", "github"]}
-                size="2x"
-                className="m-4 text-color-light d-block"
-              />
-            </div>
-            <div className="card-body ms-5 me-5">
-              <h2 className="fw-bolder">Simple Calculator App</h2>
-              <p className="fs-5 opacity-75">
-                A simple calculator app that implements basic functions such as
+          <div className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4">
+            <PortfolioHeader
+              github="https://github.com/Kafolabi/simple-calculator"
+              link="https://angry-colden-720662.netlify.app"
+            />
+            <PortfolioBody
+              heading="Simple Calculator App"
+              paragraph="A simple calculator app that implements basic functions such as
                 addition, subtraction, multiplication and division using HTML,
-                CSS and vanilla JS
-              </p>
-            </div>
+                CSS and vanilla JS"
+            />
+            <PortfolioFooter lang1="HTML" lang2="CSS" lang3="Javascript" />
           </div>
         </div>
         <div className="col-sm container">
-          <div className="card rounded-4 bg-transparent border-0 shadow-lg mt-4 pt-4 mb-4">
-            <div className="card-body ms-5 me-5">
-              <p className="fs-5 pt-5 opacity-75">
-                A simple calculator app that implements basic functions such as
-                addition, subtraction, multiplication and division using HTML,
-                CSS and vanilla JS
-              </p>
-            </div>
+          <div className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4">
+            <PortfolioHeader
+              github="https://github.com/Kafolabi/blogr"
+              link="https://keen-crumble-77c4ba.netlify.app/"
+            />
+            <PortfolioBody
+              heading="Landing Page for Fictional Writing Company"
+              paragraph="A fully responsive landing page with a neat and elegant design
+              for a fictional writing company named Blogr, powered with
+              Bootstrap, HTML and CSS"
+            />
+            <PortfolioFooter lang1="Bootstrap" lang2="HTML" lang3="CSS" />
+          </div>
+        </div>
+      </div>
+      <div className="row mt-5">
+        <div className="col-sm container">
+          <div className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4">
+            <PortfolioHeader
+              github="https://github.com/Kafolabi/pig-game"
+              link="https://main--wonderful-jackson-88b8c1.netlify.app/"
+            />
+            <PortfolioBody
+              heading="Pig Game"
+              paragraph="A basic dice game with an intuitive User Interface (UI) powered
+              and implemented with JavaScript."
+            />
+            <PortfolioFooter lang1="Javascript" lang2="CSS" lang3="HTML" />
+          </div>
+        </div>
+        <div className="col-sm container">
+          <div className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4">
+            <PortfolioHeader
+              github="https://github.com/Kafolabi/portfolio-page"
+              link="https://angry-colden-720662.netlify.app"
+            />
+            <PortfolioBody
+              heading="Portfolio Page"
+              paragraph="My newest project 😀😀😀, my full-fledged and responsive
+              portfolio page powered with React, Bootstrap and Nodejs"
+            />
+            <PortfolioFooter lang1="React" lang2="Bootstrap" lang3="Git" />
           </div>
         </div>
       </div>
