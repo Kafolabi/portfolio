@@ -1,0 +1,29 @@
+/* @import '/node_modules/bootstrap/scss/_buttons.scss';
+@import '/node_modules/bootstrap/scss/_containers.scss';
+@import '/node_modules/bootstrap/scss/_dropdown.scss';
+@import '/node_modules/bootstrap/scss/_grid.scss';
+@import '/node_modules/bootstrap/scss/_nav.scss';
+@import '/node_modules/bootstrap/scss/_navbar.scss';
+@import '/node_modules/bootstrap/scss/_utilities.scss'; */
+@import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '/src/App.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-color-light);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  opacity: 0.987 !important;
+  letter-spacing: 0.0425rem;
+}
