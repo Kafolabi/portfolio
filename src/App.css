@@ -101,7 +101,7 @@ nav {
   }
 }
 
-.progress-bar {
+.progress, .progress-bar {
   height: 2.7rem;
   /* transition: all 300ms; */
 }
