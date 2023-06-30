@@ -22,7 +22,7 @@ const Skillset = () => {
   return (
     <div>
       <Progressbars name="Bootstrap" value="100%" />
-      <Progressbars name="React" value="90%" />
+      <Progressbars name="React" value="95%" />
       <Progressbars name="JS" value="90%" />
       <Progressbars name="Git" value="88%" />
       <Progressbars name="TailwindCSS" value="85%" />
