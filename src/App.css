@@ -107,7 +107,8 @@ nav {
 }
 
 .progress {
-  background-color: 
+  background-color: var(--color-light);
+}
 
 .language {
   background-color: #dae0e6;
