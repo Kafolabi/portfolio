@@ -8,7 +8,7 @@ const Navigation = () => {
           data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavbar"
         >
-          <i class="fa-solid fa-bars text-light"></i>
+          <i class="fa-solid fa-bars bg-light"></i>
         </button>
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul
