@@ -5,20 +5,19 @@ const Navigation = () => {
   return (
     <header className="pb-5 ff-secondary">
       <nav className="fs-5 fw-light navbar navbar-expand-sm p-4 ps-5 mb-5 fixed-top">
-        {/* <button
-          class="navbar-toggler navbar-toggler-icon"
+        <FontAwesomeIcon
+          icon={faBars}
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavbar"
-          style={{color: "#fff !important"}}
-        > */}
-          {/* <i class="fa-solid fa-bars bg-light"></i> */}
-          <FontAwesomeIcon icon={faBars} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" style={{color: '#fff'}} />
+          style={{ color: "#fff" }}
+        />
 
         {/* </button> */}
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul
-            className="navbar-nav ms-auto pe-4 ps-4"
+            className="bg-color-dark navbar-nav ms-auto pe-4 ps-4 shadow rounded"
             // style={{ backgroundColor: "white" }}
             // {window.screen.width > 767 && <Social />}
             // style={window.screen.width > 767 && "backgroundColor: white"}
