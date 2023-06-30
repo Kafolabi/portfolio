@@ -1,15 +1,21 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+
 const Navigation = () => {
   return (
     <header className="pb-5 ff-secondary">
       <nav className="fs-5 fw-light navbar navbar-expand-sm p-4 ps-5 mb-5 fixed-top">
-        <button
+        {/* <button
           class="navbar-toggler navbar-toggler-icon"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavbar"
-        >
-          <i class="fa-solid fa-bars bg-light"></i>
-        </button>
+          style={{color: "#fff !important"}}
+        > */}
+          {/* <i class="fa-solid fa-bars bg-light"></i> */}
+          <FontAwesomeIcon icon={faBars} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" style={{color: '#fff'}} />
+
+        {/* </button> */}
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul
             className="navbar-nav ms-auto pe-4 ps-4"

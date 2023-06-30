@@ -40,6 +40,10 @@
   font-family: var(--ff-secondary);
 }
 
+.fa-bars {
+  color: #fff;
+}
+
 p {
   line-height: 2rem;
   /* font-weight: 600; */
