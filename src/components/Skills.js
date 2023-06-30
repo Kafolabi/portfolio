@@ -6,7 +6,7 @@ const Skills = () => {
     <section className="container my-5 py-5 ff-primary" id="skills">
       <h1> {heading("02. ", "<my skills>")} </h1>
       <div className="card bg-transparent border-0 shadow-lg mt-4 pt-4 mb-4">
-        <div className="card-body ms-5 me-5">
+        <div className="card-body ms-3 me-3">
           <Skillset />
         </div>
       </div>
