@@ -20,7 +20,7 @@ const Progressbars = (skill) => {
 
 const Skillset = () => {
   return (
-    <div className="progress">
+    <div style={{backgroundColor: "#f2f2f2"}}>
       <Progressbars name="Bootstrap" value="100%" />
       <Progressbars name="React" value="95%" />
       <Progressbars name="JS" value="90%" />
