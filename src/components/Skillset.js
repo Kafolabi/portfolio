@@ -5,7 +5,7 @@ const Progressbars = (skill) => {
         <h3 className="p-2">{skill.name}</h3>
       </div>
       <div className="col-sm-8">
-        <div className="progress rounded-pill" style={{height: "2.5rem"}}>
+        <div className="progress rounded-pill" style={{height: "2.5rem", backgroundColor: "#f2f2f2"}}>
           <div
             className="progress-bar bg-cta rounded-pill"
             style={{ width: skill.value }}
