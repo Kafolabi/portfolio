@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import "animate.css";
 
 const Navigation = () => {
   return (
@@ -17,7 +18,7 @@ const Navigation = () => {
         {/* </button> */}
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul
-            className="bg-color-dark navbar-nav ms-auto pe-4 ps-4 shadow rounded"
+            className="bg-color-dark navbar-nav ms-auto pe-4 ps-4 shadow rounded animate__animated animate__slideInDown"
             // style={{ backgroundColor: "white" }}
             // {window.screen.width > 767 && <Social />}
             // style={window.screen.width > 767 && "backgroundColor: white"}
