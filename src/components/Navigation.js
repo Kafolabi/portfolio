@@ -1,8 +1,29 @@
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "animate.css";
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   if (window.innerWidth > 765)
+//     document.getElementById("ul").style.color = "red";
+// });
 const Navigation = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Update window width on resize
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <header className="pb-5 ff-secondary">
       <nav className="fs-5 fw-light navbar navbar-expand-sm p-4 ps-5 mb-5 fixed-top">
@@ -18,11 +39,22 @@ const Navigation = () => {
         {/* </button> */}
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul
-            className="bg-color-dark navbar-nav ms-auto pe-4 ps-4 shadow rounded animate__animated animate__slideInDown"
+            className="bg-color-dark navbar-nav ms-auto pe-4 ps-4 shadow rounded"
+            id="ul"
+            // onLoad={showFeature()}
             // style={{ backgroundColor: "white" }}
-            // {window.screen.width > 767 && <Social />}
+            // {...(window.innerWidth > 765
+            //   ? (document.getElementById("ul").style.color = "red")
+            //   : console.log(""))}
+            // {...(window.innerWidth > 765
+            //   ? console.log("Hello")
+            //   : console.log(""))}
             // style={window.screen.width > 767 && "backgroundColor: white"}
           >
+            {windowWidth > 575 &&
+            document.getElementById("ul").classList.contains("shadow")
+              ? document.getElementById("ul").classList.remove("shadow")
+              : ""}
             <li className="nav-item pe-3">
               <a
                 className="d-inline-block position-relative nav-link nav-toggler"
