@@ -17,11 +17,11 @@ function App() {
       <div className="container">
         <Navigation />
         <Home />
-        <About />
-        <Skills />
-        <Portfolio />
-        <Career />
-        <ContactMe />
+        <About id="about" />
+        <Skills id="skills" />
+        <Portfolio id="portfolio" />
+        <Career id="career" />
+        <ContactMe id="contact" />
       </div>
       <Footer />
     </div>

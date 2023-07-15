@@ -33,9 +33,11 @@ const Heading = () => {
         {window.screen.width > 576 && <Caption />}
       </p>
       <div className="container">
-        <button className="bg-cta btn btn2 text-white ms-3 mt-4 p-3 fs-5 px-5">
-          Contact Me
-        </button>
+        <a href="#contact">
+          <button className="bg-cta btn btn2 text-white ms-3 mt-4 p-3 fs-5 px-5">
+            Contact Me
+          </button>
+        </a>
       </div>
     </section>
   );
