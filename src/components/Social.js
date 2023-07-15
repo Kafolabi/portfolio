@@ -24,7 +24,7 @@ const Social = () => {
           className="m-4 text-color-light d-block"
         />
       </a>
-      <a href="https://github.com/Kafolabi">
+      <a href="https://t.me/08168691211">
         <FontAwesomeIcon
           icon={["fab", "telegram"]}
           size="2x"
