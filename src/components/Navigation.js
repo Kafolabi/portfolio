@@ -77,7 +77,7 @@ const Navigation = () => {
                 href="#"
               >
                 <button className="bg-cta btn btn2 p-3 fs-5 rounded-pill text-white">
-                  CV/Resume
+                  Resume
                 </button>
               </a>
             </li>
