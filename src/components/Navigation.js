@@ -74,9 +74,12 @@ const Navigation = () => {
             <li className="nav-item pe-3">
               <a
                 className="nav-toggler d-inline-block position-relative"
-                href="#"
+                href="https://resume.io/r/dj6p5YMIv"
               >
-                <button className="bg-cta btn btn2 p-3 fs-5 rounded-pill text-white">
+                <button
+                  className="bg-cta btn btn2 p-3 fs-5 rounded-pill text-white"
+                  target="_blank"
+                >
                   Resume
                 </button>
               </a>
