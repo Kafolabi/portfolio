@@ -1,5 +1,25 @@
 # A portfolio page showcasing my amazing projects! 😀😀😀 
 
+
+Welcome to my personal portfolio site, built with cutting-edge technologies like React, Bootstrap, Node.js, and Git! This site showcases my projects, skills, and experience as a developer, and I'm excited to share it with you.
+
+## Technologies Used
+
+- Frontend: React (JavaScript library for building user interfaces)
+- Styling: Bootstrap (Popular front-end framework for responsive design)
+- Backend: Node.js (JavaScript runtime for server-side logic)
+- Version Control: Git (Distributed version control system)
+
+## Features
+
+- Responsive design for a great user experience on any device
+- Easy to navigate and explore
+- Showcases my projects, skills, and experience as a developer
+- Continuously updated with new projects and features
+
+## Live Site
+You can also view this site live at: https://stephen-afolabi.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -39,32 +59,5 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
