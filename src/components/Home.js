@@ -144,10 +144,9 @@ const Heading = () => {
             animate="visible"
             layout
             variants={{
-              hidden: { opacity: 0, y: 0 }, // Start at the same y position to avoid jumping
+              hidden: { opacity: 0 },
               visible: {
                 opacity: 1,
-                y: 0,
                 transition: { duration: 1.5, ease: "easeInOut", delay: 0.2 },
               },
             }}
@@ -161,10 +160,9 @@ const Heading = () => {
             animate="visible"
             layout
             variants={{
-              hidden: { opacity: 0, y: 0 }, // No vertical shift on load
+              hidden: { opacity: 0 },
               visible: {
                 opacity: 1,
-                y: 0,
                 transition: { duration: 1.5, ease: "easeInOut", delay: 0.4 },
               },
             }}
@@ -176,7 +174,7 @@ const Heading = () => {
         <div className="col-sm-6">
           <motion.img
             src={portfolioPic}
-            style={{ zIndex: "1" }}
+            style={{ zIndex: "1", width: "200px", height: "300px" }} // Set explicit dimensions
             alt="pic-of-me"
             className="mt-5 mb-5 w-50 h-75 rounded mx-auto d-block"
             initial={{ opacity: 0, scale: 0.8 }}
