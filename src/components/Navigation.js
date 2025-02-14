@@ -1,10 +1,17 @@
-// import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "animate.css";
-import { useEffect } from "react";
 
 const Navigation = () => {
+  // Add animation to the Resume button on page load
+  useEffect(() => {
+    const resumeButton = document.querySelector(".resume-button");
+    if (resumeButton) {
+      resumeButton.classList.add("animate__animated", "animate__pulse");
+    }
+  }, []);
+
   return (
     <header className="pb-5 ff-secondary">
       <nav className="fs-5 fw-light navbar navbar-expand-sm p-4 ps-5 mb-5 fixed-top">
@@ -17,7 +24,6 @@ const Navigation = () => {
           style={{ color: "#fff" }}
         />
 
-        {/* </button> */}
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul
             className="bg-color-dark navbar-nav ms-auto pe-4 ps-4 rounded"
@@ -75,10 +81,17 @@ const Navigation = () => {
               <a
                 className="nav-toggler d-inline-block position-relative"
                 href="https://resume.io/r/dj6p5YMIv"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <button
-                  className="bg-cta btn btn2 p-3 fs-5 rounded-pill text-white"
-                  target="_blank"
+                  className="bg-cta btn btn2 p-3 fs-5 rounded-pill text-white resume-button animate__animated"
+                  onMouseEnter={(e) => {
+                    e.target.classList.add("animate__rubberBand"); // Add hover animation
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.classList.remove("animate__rubberBand"); // Remove hover animation
+                  }}
                 >
                   Resume
                 </button>
