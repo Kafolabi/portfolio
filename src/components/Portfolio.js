@@ -11,6 +11,25 @@ const Portfolio = () => {
         <div className="col-sm container">
           <div className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4">
             <PortfolioHeader
+              github="https://github.com/Kafolabi/mortgage-repayment-app"
+              link="https://my-mortgage-repayment-app.netlify.app/"
+            />
+            <PortfolioBody
+              heading="Mortgage Repayment app"
+              paragraph="A mortgage repayment app that allows users input mortgage information
+              and calculates the monthly repayment and interest rate. Powered with 
+              React hooks, Tailwindcss and Nodejs"
+            />
+            <PortfolioFooter
+              lang1="React"
+              lang2="Tailwindcss"
+              lang3="Javascript"
+            />
+          </div>
+        </div>
+        <div className="col-sm container">
+          <div className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4">
+            <PortfolioHeader
               github="https://github.com/Kafolabi/simple-calculator"
               link="https://simple-calculator293.netlify.app"
             />
@@ -23,6 +42,8 @@ const Portfolio = () => {
             <PortfolioFooter lang1="HTML" lang2="CSS" lang3="Javascript" />
           </div>
         </div>
+      </div>
+      <div className="row mt-5">
         <div className="col-sm container">
           <div className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4">
             <PortfolioHeader
@@ -38,8 +59,6 @@ const Portfolio = () => {
             <PortfolioFooter lang1="Bootstrap" lang2="HTML" lang3="CSS" />
           </div>
         </div>
-      </div>
-      <div className="row mt-5">
         <div className="col-sm container">
           <div className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4">
             <PortfolioHeader
@@ -54,6 +73,8 @@ const Portfolio = () => {
             <PortfolioFooter lang1="Javascript" lang2="CSS" lang3="HTML" />
           </div>
         </div>
+      </div>
+      <div className="row mt-5">
         <div className="col-sm container">
           <div className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4">
             <PortfolioHeader
@@ -62,7 +83,7 @@ const Portfolio = () => {
             />
             <PortfolioBody
               heading="Portfolio Page"
-              paragraph="My newest project 😀😀😀, my full-fledged and responsive
+              paragraph="My full-fledged and responsive
               portfolio page powered with React, Bootstrap and Nodejs"
             />
             <PortfolioFooter lang1="React" lang2="Bootstrap" lang3="Git" />

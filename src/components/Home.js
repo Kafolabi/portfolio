@@ -1,6 +1,7 @@
 import Social from "./Social.js";
 import portfolioPic from "./portfolio-pic.jpg";
 import Caption from "./HeadingCaption.js";
+import * as motion from "motion/react-client";
 
 const Heading = () => {
   return (
@@ -10,12 +11,20 @@ const Heading = () => {
           {window.screen.width > 767 && <Social />}
         </div>
         <div className="col-sm-5 pt-md-5">
-          <div className="display-4 fw-bold">
-            Hi, I'm <span className="text-color-light">Stephen</span>
-          </div>
-          <div className="display-4 fw-bold pt-3">
+          <motion.div
+            className="display-4 fw-bold"
+            initial={{ opacity: 0, y: -70 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 3 } }}
+            // animate={{ scale: 2, transition: { duration: 2 } }}
+          >
+            Hi, I'm <span className="text-color-light">Kolade</span>
+          </motion.div>
+          <motion.div
+            className="display-4 fw-bold pt-3"
+            animate={{ opacity: 1, transition: { duration: 1 } }}
+          >
             <span className="text-color-light">front-end developer</span>
-          </div>
+          </motion.div>
         </div>
         <div className="col-sm-6">
           <img
