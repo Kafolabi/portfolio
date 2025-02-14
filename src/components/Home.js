@@ -14,26 +14,29 @@ const Heading = () => {
           <motion.div
             className="display-4 fw-bold"
             initial={{ opacity: 0, y: -70 }}
-            animate={{ opacity: 1, y: 0, transition: { duration: 3 } }}
-            // animate={{ scale: 2, transition: { duration: 2 } }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 2.5 } }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 2.5 } }}
           >
             Hi, I'm <span className="text-color-light">Kolade</span>
           </motion.div>
           <motion.div
             className="display-4 fw-bold pt-3"
-            animate={{ opacity: 1, transition: { duration: 1 } }}
+            initial={{ opacity: 0, y: 70 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 2.5 } }}
           >
             <span className="text-color-light">front-end developer</span>
           </motion.div>
         </div>
         <div className="col-sm-6">
-          <img
+          <motion.img
             src={portfolioPic}
             style={{ zIndex: "1" }}
             alt="pic-of-me"
             className="mt-5 mb-5 w-50 h-75 rounded mx-auto d-block"
-          ></img>
-          {/* <div className='mail d-block'><span className='text-end'>koladeafolabi2020@gmail.com</span></div> */}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1, transition: { duration: 2.5 } }}
+          ></motion.img>
+          }
         </div>
         {/* <div className='col-sm-1 mail'>koladeafolabi2020@gmail.com</div> */}
       </div>
