@@ -239,6 +239,31 @@ const Portfolio = () => {
         </div>
       </div>
 
+      <div className="row mt-5">
+        <div className="col-sm container">
+          <motion.div
+            className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
+            whileHover={{
+              scale: 1.05, // Zoom in effect
+              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)", // Shadow effect
+              transition: { duration: 0.3, ease: "easeOut" }, // Smooth transition
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition on hover out
+          >
+            <PortfolioHeader
+              github="https://github.com/Kafolabi/mapty"
+              link="https://my-mapty-fitness.netlify.app/"
+            />
+            <PortfolioBody
+              heading="Mapty Web app"
+              paragraph="Mapty is a web application that allows users to log their workouts on a map. Users can track their running and cycling activities, view their workout history, and analyze their performance over time.
+              This project uses advanced ES6+ JavaScript concepts, such as async functions, classes, modules, and local storage."
+            />
+            <PortfolioFooter lang1="HTML" lang2="CSS" lang3="ES5+" />
+          </motion.div>
+        </div>
+      </div>
+
       <h1 className="opacity-50 text-end"> {heading("", "</portfolio>")} </h1>
     </section>
   );
