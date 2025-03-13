@@ -137,7 +137,6 @@ const Portfolio = () => {
             />
           </motion.div>
         </div>
-
         <div className="col-sm container">
           <motion.div
             className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
@@ -149,22 +148,22 @@ const Portfolio = () => {
             transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition on hover out
           >
             <PortfolioHeader
-              github="https://github.com/Kafolabi/simple-calculator"
-              link="https://simple-calculator293.netlify.app"
+              github="https://github.com/Kafolabi/mapty"
+              link="https://my-mapty-fitness.netlify.app/"
             />
             <PortfolioBody
-              heading="Simple Calculator App"
-              paragraph="A simple calculator app that implements basic functions such as
-                addition, subtraction, multiplication and division using HTML,
-                CSS and vanilla JS"
+              heading="Mapty Web app"
+              paragraph="Mapty is a web application that allows users to log their workouts on a map. Users can track their running and cycling activities, view their workout history, and analyze their performance over time.
+              This project uses advanced ES6+ JavaScript concepts, such as async functions, classes, modules, and local storage."
             />
-            <PortfolioFooter lang1="HTML" lang2="CSS" lang3="Javascript" />
+            <PortfolioFooter lang1="HTML" lang2="CSS" lang3="ES6+" />
           </motion.div>
         </div>
       </div>
 
       {/* Second Row of Cards */}
       <div className="row mt-5">
+        {" "}
         <div className="col-sm container">
           <motion.div
             className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
@@ -176,19 +175,17 @@ const Portfolio = () => {
             transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition on hover out
           >
             <PortfolioHeader
-              github="https://github.com/Kafolabi/blogr"
-              link="https://blogr-fictional.netlify.app"
+              github="https://github.com/Kafolabi/portfolio"
+              link="#"
             />
             <PortfolioBody
-              heading="Landing Page for Fictional Writing Company"
-              paragraph="A fully responsive landing page with a neat and elegant design
-              for a fictional writing company named Blogr, powered with
-              Bootstrap, HTML and CSS"
+              heading="Portfolio Page"
+              paragraph="My full-fledged and responsive
+              portfolio page powered with React, Bootstrap and Nodejs"
             />
-            <PortfolioFooter lang1="Bootstrap" lang2="HTML" lang3="CSS" />
+            <PortfolioFooter lang1="React" lang2="Bootstrap" lang3="Git" />
           </motion.div>
         </div>
-
         <div className="col-sm container">
           <motion.div
             className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
@@ -226,20 +223,18 @@ const Portfolio = () => {
             transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition on hover out
           >
             <PortfolioHeader
-              github="https://github.com/Kafolabi/portfolio"
-              link="#"
+              github="https://github.com/Kafolabi/blogr"
+              link="https://blogr-fictional.netlify.app"
             />
             <PortfolioBody
-              heading="Portfolio Page"
-              paragraph="My full-fledged and responsive
-              portfolio page powered with React, Bootstrap and Nodejs"
+              heading="Landing Page for Fictional Writing Company"
+              paragraph="A fully responsive landing page with a neat and elegant design
+              for a fictional writing company named Blogr, powered with
+              Bootstrap, HTML and CSS"
             />
-            <PortfolioFooter lang1="React" lang2="Bootstrap" lang3="Git" />
+            <PortfolioFooter lang1="Bootstrap" lang2="HTML" lang3="CSS" />
           </motion.div>
         </div>
-      </div>
-
-      <div className="row mt-5">
         <div className="col-sm container">
           <motion.div
             className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
@@ -251,15 +246,16 @@ const Portfolio = () => {
             transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition on hover out
           >
             <PortfolioHeader
-              github="https://github.com/Kafolabi/mapty"
-              link="https://my-mapty-fitness.netlify.app/"
+              github="https://github.com/Kafolabi/simple-calculator"
+              link="https://simple-calculator293.netlify.app"
             />
             <PortfolioBody
-              heading="Mapty Web app"
-              paragraph="Mapty is a web application that allows users to log their workouts on a map. Users can track their running and cycling activities, view their workout history, and analyze their performance over time.
-              This project uses advanced ES6+ JavaScript concepts, such as async functions, classes, modules, and local storage."
+              heading="Simple Calculator App"
+              paragraph="A simple calculator app that implements basic functions such as
+                addition, subtraction, multiplication and division using HTML,
+                CSS and vanilla JS"
             />
-            <PortfolioFooter lang1="HTML" lang2="CSS" lang3="ES5+" />
+            <PortfolioFooter lang1="HTML" lang2="CSS" lang3="Javascript" />
           </motion.div>
         </div>
       </div>
