@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Social from "./Social";
 import "animate.css";
 
 const Navigation = () => {
@@ -96,6 +97,13 @@ const Navigation = () => {
                   Resume
                 </button>
               </a>
+            </li>
+            <li className="nav-item pe-3">
+              <div className="row">
+                <div className="col pt-4">
+                  {window.screen.width < 566 && <Social />}
+                </div>
+              </div>
             </li>
           </ul>
         </div>
