@@ -96,7 +96,6 @@
 // };
 
 // export default Portfolio;
-
 import { heading } from "../functionality.js";
 import PortfolioFooter from "./PortfolioFooter.js";
 import PortfolioHeader from "./PortfolioHeader.js";
@@ -108,17 +107,17 @@ const Portfolio = () => {
     <section className="container my-5 py-5 ff-primary" id="portfolio">
       <h1> {heading("03. ", " <portfolio>")} </h1>
 
-      {/* First Row of Cards */}
+      {/* First Row of Cards (now only two cards) */}
       <div className="row mt-5">
         <div className="col-sm container">
           <motion.div
             className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
             whileHover={{
-              scale: 1.05, // Zoom in effect
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)", // Shadow effect
-              transition: { duration: 0.3, ease: "easeOut" }, // Smooth transition
+              scale: 1.05,
+              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
+              transition: { duration: 0.3, ease: "easeOut" },
             }}
-            transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition on hover out
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <PortfolioHeader
               github="https://github.com/Kafolabi/mortgage-repayment-app"
@@ -141,11 +140,40 @@ const Portfolio = () => {
           <motion.div
             className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
             whileHover={{
-              scale: 1.05, // Zoom in effect
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)", // Shadow effect
-              transition: { duration: 0.3, ease: "easeOut" }, // Smooth transition
+              scale: 1.05,
+              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
+              transition: { duration: 0.3, ease: "easeOut" },
             }}
-            transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition on hover out
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <PortfolioHeader
+              // github="https://github.com/Kafolabi/mortgage-repayment-app"
+              link="https://euphorialook.com/"
+            />
+            <PortfolioBody
+              heading="Euphorialook ecommerce Website"
+              paragraph="A fully functional ecommerce website for euphorialook ltd - a leading fashion brand; that allows users to browse products, add them to a cart, and make purchases. Built with Wordpress and designed with elementor."
+            />
+            <PortfolioFooter
+              lang1="Wordpress"
+              lang2="Elementor"
+              lang3="namecheap"
+            />
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Second Row of Cards */}
+      <div className="row mt-5">
+        <div className="col-sm container">
+          <motion.div
+            className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
+              transition: { duration: 0.3, ease: "easeOut" },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <PortfolioHeader
               github="https://github.com/Kafolabi/mapty"
@@ -159,20 +187,15 @@ const Portfolio = () => {
             <PortfolioFooter lang1="HTML" lang2="CSS" lang3="ES6+" />
           </motion.div>
         </div>
-      </div>
-
-      {/* Second Row of Cards */}
-      <div className="row mt-5">
-        {" "}
         <div className="col-sm container">
           <motion.div
             className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
             whileHover={{
-              scale: 1.05, // Zoom in effect
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)", // Shadow effect
-              transition: { duration: 0.3, ease: "easeOut" }, // Smooth transition
+              scale: 1.05,
+              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
+              transition: { duration: 0.3, ease: "easeOut" },
             }}
-            transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition on hover out
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <PortfolioHeader
               github="https://github.com/Kafolabi/portfolio"
@@ -186,15 +209,19 @@ const Portfolio = () => {
             <PortfolioFooter lang1="React" lang2="Bootstrap" lang3="Git" />
           </motion.div>
         </div>
+      </div>
+
+      {/* Third Row of Cards */}
+      <div className="row mt-5">
         <div className="col-sm container">
           <motion.div
             className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
             whileHover={{
-              scale: 1.05, // Zoom in effect
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)", // Shadow effect
-              transition: { duration: 0.3, ease: "easeOut" }, // Smooth transition
+              scale: 1.05,
+              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
+              transition: { duration: 0.3, ease: "easeOut" },
             }}
-            transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition on hover out
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <PortfolioHeader
               github="https://github.com/Kafolabi/pig-game"
@@ -208,19 +235,15 @@ const Portfolio = () => {
             <PortfolioFooter lang1="Javascript" lang2="CSS" lang3="HTML" />
           </motion.div>
         </div>
-      </div>
-
-      {/* Third Row of Cards */}
-      <div className="row mt-5">
         <div className="col-sm container">
           <motion.div
             className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
             whileHover={{
-              scale: 1.05, // Zoom in effect
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)", // Shadow effect
-              transition: { duration: 0.3, ease: "easeOut" }, // Smooth transition
+              scale: 1.05,
+              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
+              transition: { duration: 0.3, ease: "easeOut" },
             }}
-            transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition on hover out
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <PortfolioHeader
               github="https://github.com/Kafolabi/blogr"
@@ -239,11 +262,11 @@ const Portfolio = () => {
           <motion.div
             className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
             whileHover={{
-              scale: 1.05, // Zoom in effect
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)", // Shadow effect
-              transition: { duration: 0.3, ease: "easeOut" }, // Smooth transition
+              scale: 1.05,
+              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
+              transition: { duration: 0.3, ease: "easeOut" },
             }}
-            transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition on hover out
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <PortfolioHeader
               github="https://github.com/Kafolabi/simple-calculator"
