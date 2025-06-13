@@ -211,6 +211,52 @@ const Portfolio = () => {
         </div>
       </div>
 
+      <div className="row mt-5">
+        <div className="col-sm container">
+          <motion.div
+            className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
+              transition: { duration: 0.3, ease: "easeOut" },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <PortfolioHeader
+              github="https://github.com/Kafolabi/tip-calculator2"
+              link="https://kolade-tipcalculator.netlify.app/"
+            />
+            <PortfolioBody
+              heading="Tip Calculator"
+              paragraph="Tip Calculator is a web application that allows users to calculate tips for their bills. Users can input the total bill amount and the desired tip percentage, and the app will calculate the tip amount and the total amount including the tip.
+              This project was built with React and Typescript."
+            />
+            <PortfolioFooter lang1="React" lang2="Typescript" lang3="netlify" />
+          </motion.div>
+        </div>
+        <div className="col-sm container">
+          <motion.div
+            className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
+              transition: { duration: 0.3, ease: "easeOut" },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <PortfolioHeader
+              github="https://github.com/Kafolabi/forkify"
+              link="https://forkify-nine-tan.vercel.app/"
+            />
+            <PortfolioBody
+              heading="Forkify recipe application"
+              paragraph="A full-fledged and responsive recipe application powered with Javascript, tailwindcss and Nodejs. Search any foreign dish, add ingredient to shopping list, and view recipe details."
+            />
+            <PortfolioFooter lang1="Javascript" lang2="TailwindCSS" lang3="Nodejs" />
+          </motion.div>
+        </div>
+      </div>
+
       {/* Third Row of Cards */}
       <div className="row mt-5">
         <div className="col-sm container">
