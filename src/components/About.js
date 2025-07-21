@@ -1,16 +1,8 @@
-
 import React, { useEffect, useState } from "react";
 import portfolioPic2 from "./portfolio-pic2.jpg";
 import { heading } from "../functionality.js";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const About = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    threshold: 0.2, // Animation triggers when 20% of the element is visible
-  });
-
   // Typing animation states
   const [text1, setText1] = useState("");
   const [text2, setText2] = useState("");
@@ -19,89 +11,28 @@ const About = () => {
   const fullText2 =
     "Fast forward to today, I’m a freelancer dedicated to building modern, dynamic web interfaces and applications using React and Bootstrap. I love crafting seamless experiences for my clients and bringing ideas to life!";
 
-  // Trigger animations when the element is in view
+  // Show full text immediately (no typing animation)
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-
-      // Typing animation logic
-      let currentIndex1 = 0;
-      let currentIndex2 = 0;
-
-      const interval1 = setInterval(() => {
-        if (currentIndex1 <= fullText1.length) {
-          setText1(fullText1.slice(0, currentIndex1));
-          currentIndex1++;
-        } else {
-          clearInterval(interval1);
-        }
-      }, 35); // Adjust typing speed here
-
-      const interval2 = setInterval(() => {
-        if (currentIndex2 <= fullText2.length) {
-          setText2(fullText2.slice(0, currentIndex2));
-          currentIndex2++;
-        } else {
-          clearInterval(interval2);
-        }
-      }, 50); // Adjust typing speed here
-
-      return () => {
-        clearInterval(interval1);
-        clearInterval(interval2);
-      };
-    }
-  }, [controls, inView]);
-
-  // Variants for sliding in from the right
-  const textVariants = {
-    hidden: { opacity: 0, x: 100 }, // Start off-screen to the right
-    visible: {
-      opacity: 1,
-      x: 0, // Slide to the original position
-      transition: { duration: 1, ease: "easeOut" },
-    },
-  };
-
-  const imageVariants = {
-    hidden: { opacity: 0, x: 100 }, // Start off-screen to the right
-    visible: {
-      opacity: 1,
-      x: 0, // Slide to the original position
-      transition: { duration: 1, ease: "easeOut", delay: 0.3 }, // Slight delay for staggered effect
-    },
-  };
+    setText1(fullText1);
+    setText2(fullText2);
+  }, []);
 
   return (
-    <motion.section
-      className="container mt-5 pt-5 mb-5 pb-5"
-      id="about"
-      ref={ref}
-    >
-      {/* Heading with sliding animation */}
-      <motion.h1 initial="hidden" animate={controls} variants={textVariants}>
+    <section className="container mt-5 pt-5 mb-5 pb-5" id="about">
+      {/* Heading */}
+      <h1>
         {heading("01. ", " <a little about me>")}
-      </motion.h1>
+      </h1>
 
       <div className="row gap-5">
-        {/* Text content with sliding and typing animations */}
-        <motion.div
-          className="col-sm"
-          initial="hidden"
-          animate={controls}
-          variants={textVariants}
-        >
-          <p className="pt-4 fs-5 typing-animation">{text1}</p>
-          <p className="pt-4 fs-5 typing-animation">{text2}</p>
-        </motion.div>
+        {/* Text content */}
+        <div className="col-sm">
+          <p className="pt-4 fs-5">{text1}</p>
+          <p className="pt-4 fs-5">{text2}</p>
+        </div>
 
-        {/* Image with sliding animation */}
-        <motion.div
-          className="col-sm"
-          initial="hidden"
-          animate={controls}
-          variants={imageVariants}
-        >
+        {/* Image */}
+        <div className="col-sm">
           <img
             src={portfolioPic2}
             width={340}
@@ -110,19 +41,14 @@ const About = () => {
             alt="pic-of-me"
             className="rounded mb-5 mx-auto d-block"
           />
-        </motion.div>
+        </div>
       </div>
 
-      {/* Closing heading with sliding animation */}
-      <motion.h1
-        className="opacity-50 text-end"
-        initial="hidden"
-        animate={controls}
-        variants={textVariants}
-      >
+      {/* Closing heading */}
+      <h1 className="opacity-50 text-end">
         {heading("", " </a little about me>")}
-      </motion.h1>
-    </motion.section>
+      </h1>
+    </section>
   );
 };
 
