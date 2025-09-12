@@ -57,8 +57,20 @@ const Career = () => {
         variants={slideInVariants}
         transition={{ delay: 0.4 }} // Slight delay for staggered effect
       >
-        <span className="text-color-light">Freelancer</span>
-        <span className="fw-light"> 2023 - date</span>
+        <span className="text-color-light">Web Designer @ Euphorialook ltd.</span>
+        <span className="fw-light"> 2025 </span>
+      </motion.h2>
+
+      
+      <motion.h2
+        style={{ lineHeight: "2.5rem" }}
+        initial="hidden"
+        animate={controls}
+        variants={slideInVariants}
+        transition={{ delay: 0.4 }} // Slight delay for staggered effect
+      >
+        <span className="text-color-light">Frontend Engineer @ TAIC </span>
+        <span className="fw-light"> 2025 - date </span>
       </motion.h2>
 
       <motion.h1
