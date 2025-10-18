@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Heading = () => {
   const [text, setText] = useState("");
   const fullText =
-    "I am a front-end developer making great stuff happen since 2020! Currently building awesome web applications with React and WordPress!";
+    "I'm a front-end developer passionate about crafting intuitive, responsive, and visually engaging interfaces that connect business goals with seamless user experiences.";
 
   useEffect(() => {
     let currentIndex = 0;

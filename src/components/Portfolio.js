@@ -22,6 +22,31 @@ const Portfolio = () => {
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <PortfolioHeader
+              github="https://github.com/Kafolabi/naija-cre8"
+              link="https://naijacre8.com"
+            />
+            <PortfolioBody
+              heading="Naija Cre8"
+              paragraph="Ticket booking platform for naijacre8 - the biggest gathering of Nigerian creatives. The platform allows users to view event details, book tickets for events, and make payments online. As a front end react developer, I implemented robust state management and utilized the paystack API for seamless payment integration. ChakraUI was used for styling the application."
+            />
+            <PortfolioFooter
+              lang1="React"
+              lang2="Chakraui"
+              lang3="Paystack API"
+            />
+          </motion.div>
+        </div>
+        <div className="col-sm container">
+          <motion.div
+            className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
+              transition: { duration: 0.3, ease: "easeOut" },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <PortfolioHeader
               github="https://github.com/Kafolabi/mortgage-repayment-app"
               link="https://taic.com.ng/"
             />
