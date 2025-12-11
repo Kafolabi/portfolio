@@ -1,192 +1,172 @@
-import { heading } from "../functionality.js";
-import PortfolioFooter from "./PortfolioFooter.js";
-import PortfolioHeader from "./PortfolioHeader.js";
-import PortfolioBody from "./PortfolioBody.js";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFolder, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
+
+const projects = [
+  {
+    title: "Naija Cre8",
+    description:
+      "Ticket booking platform for Naija Cre8 - the biggest gathering of Nigerian creatives. Features event details, ticket booking, and secure payments via Paystack API.",
+    tech: ["React", "Chakra UI", "Paystack API"],
+    github: "https://github.com/Kafolabi/naija-cre8",
+    link: "https://naijacre8.com",
+  },
+  {
+    title: "The Aeronautical Integration Company",
+    description:
+      "Landing page for TAIC, helping organizations streamline aviation operations. Features service information and consultation booking.",
+    tech: ["React", "Tailwind CSS"],
+    github: "https://github.com/Kafolabi/mortgage-repayment-app",
+    link: "https://taic.com.ng/",
+  },
+  {
+    title: "Euphorialook Ecommerce",
+    description:
+      "Fully functional ecommerce website for a leading fashion brand. Allows users to browse products, add to cart, and make purchases.",
+    tech: ["WordPress", "Elementor", "WooCommerce"],
+    github: null, // Private or N/A
+    link: "https://euphorialook.com/",
+  },
+  {
+    title: "Fast React Pizza",
+    description:
+      "Web application for ordering pizzas online. Users can customize pizzas, add toppings, and view order summary. Built with Redux for state management.",
+    tech: ["React", "Redux", "React Router"],
+    github: "https://github.com/Kafolabi/fast-react-pizza",
+    link: "https://fast-react-pizza-eta-sandy.vercel.app/",
+  },
+  {
+    title: "Forkify Recipe App",
+    description:
+      "Responsive recipe application. Search for dishes, add ingredients to shopping list, and view recipe details. Powered by a custom API.",
+    tech: ["JavaScript", "Tailwind CSS", "Node.js"],
+    github: "https://github.com/Kafolabi/forkify",
+    link: "https://forkify-nine-tan.vercel.app/",
+  },
+  {
+    title: "Mapty Fitness Tracker",
+    description:
+      "Map-based workout tracker. Log running and cycling activities, view workout history, and analyze performance. Uses Geolocation API and LocalStorage.",
+    tech: ["HTML", "CSS", "ES6+ JavaScript"],
+    github: "https://github.com/Kafolabi/mapty",
+    link: "https://my-mapty-fitness.netlify.app/",
+  },
+];
+
+const ProjectCard = ({ project }) => {
+  return (
+    <motion.div
+      className="col-md-6 col-lg-4 mb-4"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.div
+        className="card h-100 border-0 bg-card shadow-sm project-card"
+        whileHover={{ y: -10 }}
+      >
+        <div className="card-body d-flex flex-column p-4">
+          <div className="d-flex justify-content-between align-items-center mb-4">
+            <FontAwesomeIcon icon={faFolder} className="text-accent fa-2x" />
+            <div className="d-flex gap-3">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-secondary hover-accent"
+                >
+                  <FontAwesomeIcon icon={faGithub} size="lg" />
+                </a>
+              )}
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-secondary hover-accent"
+                >
+                  <FontAwesomeIcon icon={faExternalLinkAlt} size="lg" />
+                </a>
+              )}
+            </div>
+          </div>
+
+          <h3 className="card-title h4 fw-bold mb-3 text-primary-color">
+            {project.title}
+          </h3>
+
+          <p className="card-text text-secondary mb-4 flex-grow-1">
+            {project.description}
+          </p>
+
+          <div className="d-flex flex-wrap gap-2 mt-auto">
+            {project.tech.map((tech, index) => (
+              <span
+                key={index}
+                className="badge bg-secondary-subtle text-secondary-emphasis rounded-pill fw-normal px-3 py-2"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+};
 
 const Portfolio = () => {
   return (
-    <section className="container my-5 py-5 ff-primary" id="portfolio">
-      <h1> {heading("03. ", " <Work & Projects>")} </h1>
+    <section className="py-5" id="portfolio">
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-5"
+        >
+          <h2 className="d-flex align-items-center text-primary-color">
+            <span className="text-accent me-2">03.</span>
+            <span className="fw-bold">Some Things I've Built</span>
+            <span className="line ms-3 d-none d-sm-block"></span>
+          </h2>
+        </motion.div>
 
-      {/* First Row of Cards (now only two cards) */}
-      <div className="row mt-5">
-        <div className="col-sm container">
-          <motion.div
-            className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
-              transition: { duration: 0.3, ease: "easeOut" },
-            }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <PortfolioHeader
-              github="https://github.com/Kafolabi/naija-cre8"
-              link="https://naijacre8.com"
-            />
-            <PortfolioBody
-              heading="Naija Cre8"
-              paragraph="Ticket booking platform for naijacre8 - the biggest gathering of Nigerian creatives. The platform allows users to view event details, book tickets for events, and make payments online. As a front end react developer, I implemented robust state management and utilized the paystack API for seamless payment integration. ChakraUI was used for styling the application."
-            />
-            <PortfolioFooter
-              lang1="React"
-              lang2="Chakraui"
-              lang3="Paystack API"
-            />
-          </motion.div>
-        </div>
-        <div className="col-sm container">
-          <motion.div
-            className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
-              transition: { duration: 0.3, ease: "easeOut" },
-            }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <PortfolioHeader
-              github="https://github.com/Kafolabi/mortgage-repayment-app"
-              link="https://taic.com.ng/"
-            />
-            <PortfolioBody
-              heading="The Aeronautical Integration Company"
-              paragraph="Landing page for TAIC - an aeronautical integration company that helps organizations streamline and optimize their aviation operations by integrating systems, resources, and services. In addition to providing such information, potential clients could also book consultation sessions with the firm
-"
-            />
-            <PortfolioFooter
-              lang1="React"
-              lang2="Tailwindcss"
-            />
-          </motion.div>
-        </div>
-        <div className="col-sm container">
-          <motion.div
-            className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
-              transition: { duration: 0.3, ease: "easeOut" },
-            }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <PortfolioHeader
-              // github="https://github.com/Kafolabi/mortgage-repayment-app"
-              link="https://euphorialook.com/"
-            />
-            <PortfolioBody
-              heading="Euphorialook ecommerce Website"
-              paragraph="A fully functional ecommerce website for euphorialook ltd - a leading fashion brand; that allows users to browse products, add them to a cart, and make purchases. Built with Wordpress and designed with elementor."
-            />
-            <PortfolioFooter
-              lang1="Wordpress"
-              lang2="Elementor"
-              lang3="namecheap"
-            />
-          </motion.div>
+        <div className="row">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
         </div>
       </div>
 
-      {/* Second Row of Cards */}
-
-      <div className="row mt-5">
-        <div className="col-sm container">
-          <motion.div
-            className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
-              transition: { duration: 0.3, ease: "easeOut" },
-            }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <PortfolioHeader
-              github="https://github.com/Kafolabi/fast-react-pizza"
-              link="https://fast-react-pizza-eta-sandy.vercel.app/"
-            />
-            <PortfolioBody
-              heading="Fast React Pizza"
-              paragraph="Fast React Pizza is a web application that allows users to order pizzas online. Users can customize their pizzas, add toppings, and view their order summary. This project was built with React, react router for routing and Redux for state management."
-            />
-            <PortfolioFooter lang1="React" lang2="Redux" lang3="React Router" />
-          </motion.div>
-        </div>
-        <div className="col-sm container">
-          <motion.div
-            className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
-              transition: { duration: 0.3, ease: "easeOut" },
-            }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <PortfolioHeader
-              github="https://github.com/Kafolabi/forkify"
-              link="https://forkify-nine-tan.vercel.app/"
-            />
-            <PortfolioBody
-              heading="Forkify recipe application"
-              paragraph="A full-fledged and responsive recipe application powered with Javascript, tailwindcss and Nodejs. Search any foreign dish, add ingredient to shopping list, and view recipe details."
-            />
-            <PortfolioFooter
-              lang1="Javascript"
-              lang2="TailwindCSS"
-              lang3="Nodejs"
-            />
-          </motion.div>
-        </div>
-      </div>
-
-      <div className="row mt-5">
-        <div className="col-sm container">
-          <motion.div
-            className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
-              transition: { duration: 0.3, ease: "easeOut" },
-            }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <PortfolioHeader
-              github="https://github.com/Kafolabi/mapty"
-              link="https://my-mapty-fitness.netlify.app/"
-            />
-            <PortfolioBody
-              heading="Mapty Web app"
-              paragraph="Mapty is a web application that allows users to log their workouts on a map. Users can track their running and cycling activities, view their workout history, and analyze their performance over time.
-              This project uses advanced ES6+ JavaScript concepts, such as async functions, classes, modules, and local storage."
-            />
-            <PortfolioFooter lang1="HTML" lang2="CSS" lang3="ES6+" />
-          </motion.div>
-        </div>
-        <div className="col-sm container">
-          <motion.div
-            className="card rounded-4 bg-transparent border-0 shadow-lg my-4 pt-4"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
-              transition: { duration: 0.3, ease: "easeOut" },
-            }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <PortfolioHeader
-              github="https://github.com/Kafolabi/portfolio"
-              link="#"
-            />
-            <PortfolioBody
-              heading="Portfolio Page"
-              paragraph="My full-fledged and responsive
-              portfolio page powered with React, Bootstrap and Nodejs"
-            />
-            <PortfolioFooter lang1="React" lang2="Bootstrap" lang3="Git" />
-          </motion.div>
-        </div>
-      </div>
-
-      <h1 className="opacity-50 text-end"> {heading("", "</portfolio>")} </h1>
+      <style jsx>{`
+        .bg-card {
+          background-color: var(--bg-card);
+        }
+        .text-primary-color {
+          color: var(--text-primary);
+        }
+        .hover-accent:hover {
+          color: var(--accent-color) !important;
+        }
+        .line {
+          height: 1px;
+          background-color: var(--text-secondary);
+          opacity: 0.3;
+          flex-grow: 1;
+          max-width: 300px;
+        }
+        .project-card {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+          box-shadow: var(--shadow-lg) !important;
+        }
+      `}</style>
     </section>
   );
 };

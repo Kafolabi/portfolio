@@ -1,60 +1,51 @@
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
-const Progressbars = ({ name, value }) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    threshold: 0.5, // Trigger animation when 50% of the element is visible
-  });
-
-  // Animate the progress bar when in view
-  useEffect(() => {
-    if (inView) {
-      controls.start({ width: value }); // Animate to the final width
-    }
-  }, [controls, inView, value]);
-
+const SkillBar = ({ name, value, percentage }) => {
   return (
-    <div className="row p-2 pt-3" ref={ref}>
-      <div className="col-sm-4">
-        <h3 className="p-2">{name}</h3>
+    <div className="mb-4">
+      <div className="d-flex justify-content-between mb-2">
+        <span className="fw-bold text-primary-color">{name}</span>
+        <span className="text-secondary">{percentage}</span>
       </div>
-      <div className="col-sm-8">
-        <div
-          className="progress rounded-pill"
-          style={{ height: "2.5rem", backgroundColor: "transparent" }}
-        >
-          <motion.div
-            className="progress-bar bg-cta rounded-pill"
-            initial={{ width: "0%" }} // Start from 0%
-            animate={controls} // Animate to the final width
-            transition={{ duration: 1.5, ease: "easeOut" }} // Smooth transition
-            style={{ display: "flex", alignItems: "center" }}
-          >
-            <motion.span
-              className="fs-5"
-              initial={{ opacity: 0 }} // Start invisible
-              animate={{ opacity: 1 }} // Fade in
-              transition={{ delay: 1, duration: 0.5 }} // Delay and fade in
-            >
-              {value}
-            </motion.span>
-          </motion.div>
-        </div>
+      <div
+        className="progress"
+        style={{ height: "10px", backgroundColor: "var(--bg-secondary)" }}
+      >
+        <motion.div
+          className="progress-bar rounded-pill"
+          style={{ backgroundColor: "var(--accent-color)" }}
+          initial={{ width: 0 }}
+          whileInView={{ width: value }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        />
       </div>
     </div>
   );
 };
 
 const Skillset = () => {
+  const skills = [
+    { name: "Bootstrap", value: "100%", percentage: "100%" },
+    { name: "React", value: "95%", percentage: "95%" },
+    { name: "JavaScript (ES6+)", value: "90%", percentage: "90%" },
+    { name: "Git & GitHub", value: "88%", percentage: "88%" },
+    { name: "Tailwind CSS", value: "85%", percentage: "85%" },
+    { name: "Node.js", value: "70%", percentage: "70%" },
+  ];
+
   return (
-    <div>
-      <Progressbars name="Bootstrap" value="100%" />
-      <Progressbars name="React" value="95%" />
-      <Progressbars name="JS" value="90%" />
-      <Progressbars name="Git" value="88%" />
-      <Progressbars name="TailwindCSS" value="85%" />
+    <div className="row">
+      {skills.map((skill, index) => (
+        <div className="col-md-6" key={index}>
+          <SkillBar {...skill} />
+        </div>
+      ))}
+      <style jsx>{`
+        .text-primary-color {
+          color: var(--text-primary);
+        }
+      `}</style>
     </div>
   );
 };

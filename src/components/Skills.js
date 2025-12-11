@@ -1,28 +1,48 @@
-import { heading } from "../functionality.js";
+import React from "react";
 import Skillset from "./Skillset.js";
 import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
-    <section className="container my-5 py-5 ff-primary" id="skills">
-      <h1> {heading("02. ", "<my skills>")} </h1>
-
-      {/* Card with hover animations */}
+    <section className="container py-5 my-5" id="skills">
       <motion.div
-        className="card bg-transparent border-0 rounded-lg shadow-lg mt-4 pt-4 mb-4"
-        whileHover={{
-          scale: 1.05, // Zoom in effect
-          boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)", // Shadow effect
-          transition: { duration: 0.5, ease: "easeOut" }, // Smooth transition
-        }}
-        transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition on hover out
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
       >
-        <div className="card-body ms-2 me-2">
-          <Skillset />
-        </div>
+        <h2 className="d-flex align-items-center text-primary-color mb-5">
+          <span className="text-accent me-2">02.</span>
+          <span className="fw-bold">My Skills</span>
+          <span className="line ms-3 d-none d-sm-block"></span>
+        </h2>
       </motion.div>
 
-      <h1 className="opacity-50 text-end"> {heading("", "</my skills>")} </h1>
+      <motion.div
+        className="card border-0 shadow-lg p-4 p-md-5 bg-card"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <Skillset />
+      </motion.div>
+
+      <style jsx>{`
+        .text-primary-color {
+          color: var(--text-primary);
+        }
+        .line {
+          height: 1px;
+          background-color: var(--text-secondary);
+          opacity: 0.3;
+          flex-grow: 1;
+          max-width: 300px;
+        }
+        .bg-card {
+          background-color: var(--bg-card);
+        }
+      `}</style>
     </section>
   );
 };
