@@ -1,4 +1,3 @@
-import React from "react";
 import Skillset from "./Skillset.js";
 import { motion } from "framer-motion";
 

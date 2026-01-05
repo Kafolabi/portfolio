@@ -6,10 +6,18 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "StripppleCare Landing Page",
+    description:
+      "StripppleCare is a healthtech startup that specializes in fraud detection and dispute resolution for HMOs and Insurtechs across Africa. This landing page properly commpunicates the product & allows potential investors and partners book sessions ",
+    tech: ["Nextjs", "Typescript", "Tailwind"],
+    github: "https://github.com/Kafolabi/strippple-frontend",
+    link: "https://strippplecare.com/",
+  },
+  {
     title: "Naija Cre8",
     description:
       "Ticket booking platform for Naija Cre8 - the biggest gathering of Nigerian creatives. Features event details, ticket booking, and secure payments via Paystack API.",
-    tech: ["React", "Chakra UI", "Paystack API"],
+    tech: ["React", "ChakraUI", "Paystack API"],
     github: "https://github.com/Kafolabi/naija-cre8",
     link: "https://naijacre8.com",
   },
@@ -45,14 +53,14 @@ const projects = [
     github: "https://github.com/Kafolabi/forkify",
     link: "https://forkify-nine-tan.vercel.app/",
   },
-  {
-    title: "Mapty Fitness Tracker",
-    description:
-      "Map-based workout tracker. Log running and cycling activities, view workout history, and analyze performance. Uses Geolocation API and LocalStorage.",
-    tech: ["HTML", "CSS", "ES6+ JavaScript"],
-    github: "https://github.com/Kafolabi/mapty",
-    link: "https://my-mapty-fitness.netlify.app/",
-  },
+  // {
+  //   title: "Mapty Fitness Tracker",
+  //   description:
+  //     "Map-based workout tracker. Log running and cycling activities, view workout history, and analyze performance. Uses Geolocation API and LocalStorage.",
+  //   tech: ["HTML", "CSS", "ES6+ JavaScript"],
+  //   github: "https://github.com/Kafolabi/mapty",
+  //   link: "https://my-mapty-fitness.netlify.app/",
+  // },
 ];
 
 const ProjectCard = ({ project }) => {
@@ -107,7 +115,7 @@ const ProjectCard = ({ project }) => {
             {project.tech.map((tech, index) => (
               <span
                 key={index}
-                className="badge bg-secondary-subtle text-secondary-emphasis rounded-pill fw-normal px-3 py-2"
+                className="badge rounded-pill fw-normal px-3 py-2 tech-badge"
               >
                 {tech}
               </span>
@@ -165,6 +173,10 @@ const Portfolio = () => {
         }
         .project-card:hover {
           box-shadow: var(--shadow-lg) !important;
+        }
+        .tech-badge {
+          background-color: var(--border-color);
+          color: var(--text-primary);
         }
       `}</style>
     </section>

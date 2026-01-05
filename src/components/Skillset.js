@@ -13,7 +13,7 @@ const SkillBar = ({ name, value, percentage }) => {
       >
         <motion.div
           className="progress-bar rounded-pill"
-          style={{ backgroundColor: "var(--accent-color)" }}
+          style={{ backgroundColor: "var(--accent-color)", height: "100%" }}
           initial={{ width: 0 }}
           whileInView={{ width: value }}
           viewport={{ once: true }}
@@ -26,12 +26,13 @@ const SkillBar = ({ name, value, percentage }) => {
 
 const Skillset = () => {
   const skills = [
-    { name: "Bootstrap", value: "100%", percentage: "100%" },
-    { name: "React", value: "95%", percentage: "95%" },
-    { name: "JavaScript (ES6+)", value: "90%", percentage: "90%" },
+    { name: "React", value: "100%", percentage: "95%" },
+    { name: "Nextjs", value: "80%", percentage: "80%" },
+    { name: "Typescript", value: "85%", percentage: "85%" },
     { name: "Git & GitHub", value: "88%", percentage: "88%" },
     { name: "Tailwind CSS", value: "85%", percentage: "85%" },
-    { name: "Node.js", value: "70%", percentage: "70%" },
+    { name: "ChakraUI", value: "70%", percentage: "70%" },
+    { name: "Supabase", value: "95%", percentage: "95%" },
   ];
 
   return (
