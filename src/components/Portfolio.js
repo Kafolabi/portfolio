@@ -11,7 +11,7 @@ const projects = [
       "StripppleCare is a healthtech startup that specializes in fraud detection and dispute resolution for HMOs and Insurtechs across Africa. This landing page properly commpunicates the product & allows potential investors and partners book sessions ",
     tech: ["Nextjs", "Typescript", "Tailwind"],
     github: "https://github.com/Kafolabi/strippple-frontend",
-    link: "https://strippplecare.com/",
+    link: "https://care.strippplecare.com/",
   },
   {
     title: "Naija Cre8",
